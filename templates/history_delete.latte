@@ -1,0 +1,11 @@
+<h2>Smazat historii</h2>
+
+{include 'part_flashes.latte'}
+ 
+<form action="index.php" method="POST">
+Smazat záznamy starší než <input type="text" name="hours" style="width: 3em;"> hodin.<br />
+Heslo pro smazání: <input type="password" name="pass">
+  <input type="submit" text="Odeslat">
+  <input type="hidden" name="page" value="history_delete">
+  <input type="hidden" name="process" value="1">
+</form>

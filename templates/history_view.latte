@@ -1,0 +1,22 @@
+<h2>Historie vyhledávání</h2>
+{include 'part_flashes.latte'}
+
+{if $records}
+<table class="grid">
+<tr>
+  <th>Hledaná fráze</th>
+  <th>Datum</th>
+  <th>IP adresa</th>
+</tr>
+
+{foreach $records as $record}
+<tr>
+  <td>{$record['phrase']|truncate:30}</td>
+  <td>{$record['search_datetime']|date:'j.n.Y H:i:s'}</td>
+  <td>{$record['ip']}</td>
+</tr>
+{/foreach}
+</table>
+
+{$paginator|noescape}
+{/if}

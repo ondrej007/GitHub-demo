@@ -1,0 +1,21 @@
+<h2>Výsledky vyhledávání - uživatel <a n:tag-if="$userUrl" href="{$userUrl}" target="_blank">{$username}</a></h2>
+{include 'part_flashes.latte'}
+
+{if $repos}
+<table class="grid">
+<tr>
+	<th>Název</th>
+	<th>Popis</th>
+  <th>Vytvořeno</th>
+  <th>Jazyk</th>
+</tr>
+{foreach $repos as $repo}
+<tr>
+  <td><a href="{$repo['html_url']}" target="_blank">{$repo['name']|truncate:18}</a></td>
+  <td>{$repo['description']|truncate:48}</td>
+  <td>{$repo['created_at']|date:'j.n.Y H:i:s'}</td>
+  <td>{$repo['language']|truncate:10}</td>
+</tr>
+{/foreach}
+</table>
+{/if}
