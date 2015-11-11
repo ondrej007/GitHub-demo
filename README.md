@@ -2,7 +2,7 @@
 
 Simple PHP web application written primarily for my job interview purposes.
 
-Uses GitHub API, Latte templates and mardix/Paginator.
+Uses GitHub API, Latte templates and voodoophp/Paginator.
 
 ## Features
 * search for desired GitHub user's repositories and show basic info about them
@@ -20,7 +20,7 @@ It speaks to user in czech only.
       "php": ">= 5.4",
       "latte/latte": "~2.3.0",
       "knplabs/github-api": "~1.4",
-      "mardix/paginator": "2.*"    
+      "voodoophp/paginator": "2.*"    
     }
     
 ## Installation
